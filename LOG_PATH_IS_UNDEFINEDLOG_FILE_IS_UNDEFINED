@@ -1,0 +1,20 @@
+2018-12-17 00:00:13,138 [INFO] [RenrenScheduler_Worker-1] io.renren.modules.job.utils.ScheduleJob [ScheduleJob.java : 67] 任务准备执行，任务ID：1
+2018-12-17 00:00:21,301 [INFO] [pool-1-thread-1] io.renren.modules.job.task.TestTask [TestTask.java : 43] 我是带参数的test方法，正在被执行，参数为：renren
+2018-12-17 00:00:23,310 [INFO] [RenrenScheduler_Worker-1] io.renren.modules.job.utils.ScheduleJob [ScheduleJob.java : 80] 任务执行完毕，任务ID：1  总共耗时：10172毫秒
+2018-12-17 00:00:37,516 [ERROR] [RenrenScheduler_Worker-1] com.alibaba.druid.filter.stat.StatFilter [StatFilter.java : 478] slow sql 4545 millis. INSERT INTO schedule_job_log 
+ ( job_id,
+	bean_name,
+	method_name,
+	params,
+	`status`,
+	
+	times,
+	create_time )  VALUES 
+ ( ?,
+	?,
+	?,
+	?,
+	?,
+	
+	?,
+	? )[1,"testTask","test","renren",0,10172,"2018-12-17 00:00:13"]

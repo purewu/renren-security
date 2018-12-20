@@ -17,9 +17,14 @@
 package io.renren.modules.sys.service;
 
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.baomidou.mybatisplus.plugins.Page;
 import com.baomidou.mybatisplus.service.IService;
 import io.renren.common.utils.PageUtils;
+import io.renren.common.utils.Query;
+import io.renren.modules.sys.entity.SysDictEntity;
 import io.renren.modules.sys.entity.SysLogEntity;
+import org.apache.commons.lang.StringUtils;
 
 import java.util.Map;
 
@@ -34,5 +39,6 @@ import java.util.Map;
 public interface SysLogService extends IService<SysLogEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
+
 
 }

@@ -19,7 +19,7 @@ import java.util.Map;
  * @author wudepeng
  * @since 2018/12/19
  */
-@Api(value = "字典控制类")
+//@Api(value = "字典控制类")
 @RestController
 public class SysDictController {
 
@@ -28,11 +28,12 @@ public class SysDictController {
     private SysDictService dictService;
 
 
-    @ApiOperation(value = "列表查询")
+//    @ApiOperation(value = "列表查询")
+
     @RequestMapping("/list")
     @RequiresPermissions("sys:user:list")
     public R list(@RequestParam Map<String, Object> params) {
-        PageUtils dict = dictService.queryPage(params);
-        return R.ok().put("dict", dict);
+        PageUtils page = dictService.queryPage(params);
+        return R.ok().put("page", page);
     }
 }

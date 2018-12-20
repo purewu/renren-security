@@ -26,7 +26,7 @@ public class SysDictServiceImpl extends ServiceImpl<SysDictDao, SysDictEntity> i
         String name = (String) params.get("name");
         Page page = this.selectPage(
                 new Query<SysDictEntity>(params).getPage(),
-                new EntityWrapper<SysDictEntity>().like(StringUtils.isNotBlank(name), "username", name)
+                new EntityWrapper<SysDictEntity>().like(StringUtils.isNotBlank(name), "name", name)
         );
 
 
